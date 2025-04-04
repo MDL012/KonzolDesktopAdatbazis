@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
 
-namespace KonzolDesktopAdatbazisConsole.Model;
+namespace KonzolDesktopAdatbazisConsole.DBModel;
 
 public partial class WorkerContext : DbContext
 {
