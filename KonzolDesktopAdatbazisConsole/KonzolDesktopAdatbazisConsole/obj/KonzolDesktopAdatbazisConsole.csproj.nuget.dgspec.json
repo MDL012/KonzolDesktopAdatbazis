@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\szt3mesden\\source\\repos\\komplex-01-01-01-vasarlo-console-desktop-MDL012\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole.csproj": {}
+    "C:\\Users\\szt3mesden\\Source\\Repos\\KonzolDesktopAdatbazis\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole.csproj": {}
   },
   "projects": {
-    "C:\\Users\\szt3mesden\\source\\repos\\komplex-01-01-01-vasarlo-console-desktop-MDL012\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole.csproj": {
+    "C:\\Users\\szt3mesden\\Source\\Repos\\KonzolDesktopAdatbazis\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\szt3mesden\\source\\repos\\komplex-01-01-01-vasarlo-console-desktop-MDL012\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole.csproj",
+        "projectUniqueName": "C:\\Users\\szt3mesden\\Source\\Repos\\KonzolDesktopAdatbazis\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole.csproj",
         "projectName": "KonzolDesktopAdatbazisConsole",
-        "projectPath": "C:\\Users\\szt3mesden\\source\\repos\\komplex-01-01-01-vasarlo-console-desktop-MDL012\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole.csproj",
+        "projectPath": "C:\\Users\\szt3mesden\\Source\\Repos\\KonzolDesktopAdatbazis\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole.csproj",
         "packagesPath": "C:\\Users\\szt3mesden\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\szt3mesden\\source\\repos\\komplex-01-01-01-vasarlo-console-desktop-MDL012\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole\\obj\\",
+        "outputPath": "C:\\Users\\szt3mesden\\Source\\Repos\\KonzolDesktopAdatbazis\\KonzolDesktopAdatbazisConsole\\KonzolDesktopAdatbazisConsole\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "SQLitePCLRaw.bundle_e_sqlite3": {
+              "target": "Package",
+              "version": "[2.1.10, )"
+            },
+            "SQLitePCLRaw.core": {
+              "target": "Package",
+              "version": "[2.1.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
