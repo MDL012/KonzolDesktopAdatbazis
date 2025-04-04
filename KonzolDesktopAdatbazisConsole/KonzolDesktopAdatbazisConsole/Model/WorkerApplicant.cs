@@ -8,7 +8,7 @@ namespace KonzolDesktopAdatbazisConsole.Model
 {
     public class WorkerApplicant
     {
-        private int _salary;
+        private decimal _salary;
         private string _email;
 
         public WorkerApplicant(string name, string email)
@@ -29,9 +29,9 @@ namespace KonzolDesktopAdatbazisConsole.Model
             _email = email;
             _salary = 0;
         }
-        public string? Name { get; set; }
-        public string? Email { get => _email; set => _email = value; }
-        public int? Salary { get => _salary; set => _salary = (int)value; }
+        public string Name { get; set; }
+        public string Email { get => _email; set => _email = value; }
+        public decimal Salary { get => _salary; set => _salary = value; }
 
         public void AddMoney(int salary)
         {

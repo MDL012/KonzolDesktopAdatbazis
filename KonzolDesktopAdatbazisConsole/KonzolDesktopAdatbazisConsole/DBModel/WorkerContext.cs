@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using KonzolDesktopAdatbazisConsole.Model;
 using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
 
@@ -16,7 +17,7 @@ public partial class WorkerContext : DbContext
     {
     }
 
-    public virtual DbSet<Worker> Workers { get; set; }
+    public virtual DbSet<WorkerApplicant> Workers { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -28,10 +29,9 @@ public partial class WorkerContext : DbContext
             .UseCollation("utf8_hungarian_ci")
             .HasCharSet("utf8");
 
-        modelBuilder.Entity<Worker>(entity =>
+        modelBuilder.Entity<WorkerApplicant>(entity =>
         {
             entity
-                .HasNoKey()
                 .ToTable("worker")
                 .UseCollation("utf8_general_ci");
 
@@ -44,6 +44,7 @@ public partial class WorkerContext : DbContext
             entity.Property(e => e.Salary)
                 .HasColumnType("int(6)")
                 .HasColumnName("salary");
+            entity.HasKey(e => e.Email);
         });
 
         OnModelCreatingPartial(modelBuilder);
