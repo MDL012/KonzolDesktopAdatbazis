@@ -37,7 +37,7 @@ namespace KonzolDesktopAdatbazisConsole.Model
         {
             if(salary <= 0)
             {
-                throw new ArgumentNullException(nameof(salary));
+                throw new ArgumentOutOfRangeException(nameof(salary));
             }
             _salary += salary;
         }
