@@ -11,7 +11,7 @@ namespace KonzolDesktopAdatbazisConsole.Model
         private decimal _salary;
         private string _email;
 
-        public WorkerApplicant(string name, string email)
+        public WorkerApplicant(string email, string name)
         {
             if (string.IsNullOrEmpty(email))
             {
