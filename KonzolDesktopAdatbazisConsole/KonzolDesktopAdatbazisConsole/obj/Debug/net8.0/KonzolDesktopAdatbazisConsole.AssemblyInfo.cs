@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KonzolDesktopAdatbazisConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+565cb3544fe8be530df0ce08ab6977f9bfa53a3d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5fafbc8a70306106cdead476479e21fb4271cd4")]
 [assembly: System.Reflection.AssemblyProductAttribute("KonzolDesktopAdatbazisConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KonzolDesktopAdatbazisConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

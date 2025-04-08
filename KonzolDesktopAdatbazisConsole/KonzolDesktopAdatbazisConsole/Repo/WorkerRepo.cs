@@ -1,6 +1,8 @@
 ﻿
 
 using KonzolDesktopAdatbazisConsole.DBModel;
+using KonzolDesktopAdatbazisConsole.Model;
+using Microsoft.EntityFrameworkCore;
 using SQLitePCL;
 using System.Linq;
 
@@ -9,6 +11,10 @@ namespace KonzolDesktopAdatbazisConsole.Repo
     public class WorkerRepo
     {
         private readonly WorkerContext _context = new WorkerContext();
+        public List<WorkerApplicant> GetAll()
+        {
+            return _context.Workers.ToList();
+        }
 
         public int GetNumberOfWorker()
         {
@@ -43,6 +49,16 @@ namespace KonzolDesktopAdatbazisConsole.Repo
             return _context.Workers
                 .OrderBy(s => s.Salary)
                 .FirstOrDefault().Name;
+        }
+
+        public void removeWorker(string email)
+        {
+            WorkerApplicant? found = _context.Workers.FirstOrDefault(s => s.Email == email);
+            if (found == null)
+                return;
+
+            _context.Workers.Remove(found);
+            _context.SaveChanges();
         }
     }
 }

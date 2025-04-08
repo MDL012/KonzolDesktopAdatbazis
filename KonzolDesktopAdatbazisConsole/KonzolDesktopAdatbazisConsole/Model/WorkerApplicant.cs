@@ -46,5 +46,7 @@ namespace KonzolDesktopAdatbazisConsole.Model
         {
             return $"{Name} ({_email}) {_salary}Ft";
         }
+
+        
     }
 }
