@@ -33,23 +33,36 @@ namespace KonzolDesktopAdatbazisConsole.Repo
                 .Where(s => s.Salary > 0)
                 .Count();
         }
-        public decimal AvgOfSalary()
+        public decimal GetAvgOfSalary()
         {
             return _context.Workers
                 .Average(s => s.Salary);
         }
-        public string HighestPaidWorker()
+        public string GetHighestPaidWorker()
         {
             return _context.Workers
                 .OrderByDescending(s => s.Salary)
-                .FirstOrDefault().Name;
+                .Select(s => s.Name)
+                .First();
+
         }
-        public string LowestPaidWorker()
+        public string GetLowestPaidWorker()
         {
             return _context.Workers
                 .OrderBy(s => s.Salary)
-                .FirstOrDefault().Name;
+                .Select(s => s.Name)
+                .First();
         }
+        public Dictionary<string, int> GetDictionaryEmail()
+        {
+            var email = _context.Workers
+                .Where(e => !string.IsNullOrEmpty(e.Email) && e.Email.Contains("@"));
+            return _context.Workers
+                .Where(e => !string.IsNullOrEmpty(e.Email) && e.Email.Contains("@"))
+                .GroupBy(e => e.Email.Substring(e.Email.IndexOf('@') + 1))
+                .ToDictionary(e => e.Key, e => e.Count());
+        }
+
 
         public void removeWorker(string email)
         {

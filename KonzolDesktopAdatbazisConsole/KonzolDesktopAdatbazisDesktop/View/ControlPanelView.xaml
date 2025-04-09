@@ -13,5 +13,25 @@
             <Label>Dolgozók száma:</Label>
             <Label Content="{Binding NumberOfApplicant}"></Label>
         </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Kifizetet dolgozók száma:</Label>
+            <Label Content="{Binding NumberOfPayed}"></Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Kifizetetlen dolgozók száma:</Label>
+            <Label Content="{Binding NumberOfUnPayed}"></Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>A legtőbbet kereső dolgozó:</Label>
+            <Label Content="{Binding HighestPaidWorker}"></Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>A legkevesebbet kereső dolgozó:</Label>
+            <Label Content="{Binding LowestPaidWorker}"></Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>A dolgozók átlagkeresete:</Label>
+            <Label Content="{Binding AvgOfSalary}"></Label>
+        </StackPanel>
     </StackPanel>
 </UserControl>
